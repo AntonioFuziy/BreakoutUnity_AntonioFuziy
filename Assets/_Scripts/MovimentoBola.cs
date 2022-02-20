@@ -8,6 +8,7 @@ public class MovimentoBola : MonoBehaviour
     
     [Range(1, 15)]
     public float velocidade = 5.0f;
+    public AudioSource collideSound;
     private Vector3 direcao;
     GameManager gm;
 
@@ -18,6 +19,7 @@ public class MovimentoBola : MonoBehaviour
 
         direcao = new Vector3(dirX, dirY).normalized;
         gm = GameManager.GetInstance();
+        collideSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,7 +42,6 @@ public class MovimentoBola : MonoBehaviour
         if(posicaoViewport.y < 0){
             Reset();
         }
-        Debug.Log($"Vidas: {gm.vidas} \t | \t Pontos: {gm.pontos}");
     }
 
     private void Reset(){
@@ -55,6 +56,7 @@ public class MovimentoBola : MonoBehaviour
         float dirY = Random.Range(2.0f, 5.0f);
 
         direcao = new Vector3(dirX, dirY).normalized;
+        collideSound.Play();
         gm.vidas--;
     }
 
@@ -70,5 +72,6 @@ public class MovimentoBola : MonoBehaviour
             direcao = new Vector3(direcao.x, -direcao.y);
             gm.pontos++;
         }
+        collideSound.Play();
     }
 }

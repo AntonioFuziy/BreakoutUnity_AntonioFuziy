@@ -24,7 +24,6 @@ public class BlocoSpawner : MonoBehaviour
 
     void Construir(){
         if(gm.gameState == GameManager.GameState.GAME){
-
             foreach(Transform child in transform){
                 GameObject.Destroy(child.gameObject);
             }
