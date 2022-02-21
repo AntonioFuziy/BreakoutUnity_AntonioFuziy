@@ -1686,6 +1686,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1400318909}
   - component: {fileID: 1400318910}
+  - component: {fileID: 1400318911}
   m_Layer: 0
   m_Name: BlocoPool
   m_TagString: Untagged
@@ -1702,7 +1703,7 @@ Transform:
   m_GameObject: {fileID: 1400318908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.6923999, y: -2.7708364, z: -5.1083546}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1720,6 +1721,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bloco: {fileID: 7286202810040440891, guid: d0343b4cc5a7b5b4881e89598676fa43, type: 3}
+--- !u!114 &1400318911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400318908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5879afcfddc92b449a5bfe0ac1ff094c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroySoundSource: {fileID: 0}
+  blockHealth: 2
 --- !u!1 &1550394980
 GameObject:
   m_ObjectHideFlags: 0
