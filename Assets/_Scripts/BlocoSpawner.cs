@@ -28,9 +28,9 @@ public class BlocoSpawner : MonoBehaviour
                 GameObject.Destroy(child.gameObject);
             }
 
-            for(int i = 0; i < 12; i++){
+            for(int i = 0; i < 8; i++){
                 for(int j = 0; j < 4; j++){
-                    Vector3 posicao = new Vector3(-8.5f + 1.53f * i, 4 - 0.55f * j);
+                    Vector3 posicao = new Vector3(-5.5f + 1.53f * i, 4 - 0.55f * j);
                     Instantiate(Bloco, posicao, Quaternion.identity, transform);
                 }
             }
